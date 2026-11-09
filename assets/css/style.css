@@ -129,6 +129,8 @@ body::after{
 .card p{color:var(--muted);font-size:13.8px;line-height:1.9;text-align:center}
 .card .ico{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(135deg,#2b7bff,#7a4bff);box-shadow:0 10px 22px rgba(43,105,240,.28);margin:0 auto 18px;font-size:22px;font-weight:900}
 .card .ico.warm{background:linear-gradient(135deg,#ffc65c,#ef3a35);box-shadow:0 10px 22px rgba(239,58,53,.24)}
+/* 会员档位金额：胶囊宽度随文字自适应，避免移动端色块与数字宽度不符 */
+.card .ico.price{width:max-content;min-width:112px;height:46px;padding:0 20px;border-radius:999px;font-size:19px;line-height:1;white-space:nowrap;letter-spacing:.01em;font-variant-numeric:tabular-nums;background:linear-gradient(135deg,#ffc65c,#ef3a35);box-shadow:0 10px 22px rgba(239,58,53,.24)}
 .card .ico svg{width:26px;height:26px}
 .card .num{font-size:12px;font-weight:900;letter-spacing:.18em;color:var(--blue);margin-bottom:10px}
 .card h3{font-size:19px;font-weight:850;margin-bottom:10px;line-height:1.5;text-align:center}
@@ -321,6 +323,7 @@ body::after{
   .article-card h3{font-size:18px}
   .info-table th,.info-table td{padding:11px 8px;font-size:13px}
   .info-table th{width:34%}
+  .card .ico.price{min-width:96px;height:42px;padding:0 14px;font-size:17px}
 }
 @media (max-width:480px){
   .container{padding:0 18px}
@@ -328,4 +331,5 @@ body::after{
   .hero-sub{font-size:14.5px}
   .btn{padding:11px 18px;font-size:13.5px}
   .cta-band{padding:40px 20px}
+  .card .ico.price{min-width:92px;height:40px;padding:0 12px;font-size:16px}
 }
