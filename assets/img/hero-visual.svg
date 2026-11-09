@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" fill="none" aria-hidden="true">
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD98A" stop-opacity=".95"/>
+      <stop offset="45%" stop-color="#F5A623" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#EF3A35" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4D9BFF"/>
+      <stop offset="55%" stop-color="#7A4BFF"/>
+      <stop offset="100%" stop-color="#EF3A35"/>
+    </linearGradient>
+    <linearGradient id="grain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFC65C"/>
+      <stop offset="100%" stop-color="#EF3A35"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <circle cx="450" cy="310" r="230" fill="url(#core)" opacity=".30" filter="url(#soft)"/>
+
+  <g stroke="url(#ring)" stroke-width="1.4" opacity=".55">
+    <circle cx="450" cy="310" r="248"/>
+    <circle cx="450" cy="310" r="206" stroke-dasharray="5 9"/>
+    <circle cx="450" cy="310" r="164"/>
+    <circle cx="450" cy="310" r="122" stroke-dasharray="2 8"/>
+    <ellipse cx="450" cy="310" rx="248" ry="96" transform="rotate(-24 450 310)" opacity=".65"/>
+    <ellipse cx="450" cy="310" rx="248" ry="96" transform="rotate(24 450 310)" opacity=".65"/>
+    <ellipse cx="450" cy="310" rx="206" ry="72" transform="rotate(68 450 310)" opacity=".45"/>
+  </g>
+
+  <g fill="url(#grain)">
+    <circle cx="450" cy="62" r="7"/><circle cx="574" cy="86" r="4.5"/>
+    <circle cx="690" cy="160" r="6"/><circle cx="698" cy="310" r="4"/>
+    <circle cx="660" cy="452" r="6.5"/><circle cx="560" cy="540" r="4"/>
+    <circle cx="450" cy="558" r="7"/><circle cx="340" cy="540" r="4"/>
+    <circle cx="240" cy="452" r="6.5"/><circle cx="202" cy="310" r="4"/>
+    <circle cx="210" cy="160" r="6"/><circle cx="326" cy="86" r="4.5"/>
+  </g>
+  <g fill="#4D9BFF" opacity=".75">
+    <circle cx="450" cy="104" r="3.5"/><circle cx="556" cy="132" r="3"/>
+    <circle cx="656" cy="232" r="3.5"/><circle cx="656" cy="388" r="3"/>
+    <circle cx="556" cy="488" r="3.5"/><circle cx="344" cy="488" r="3"/>
+    <circle cx="244" cy="388" r="3.5"/><circle cx="244" cy="232" r="3"/>
+    <circle cx="344" cy="132" r="3.5"/>
+  </g>
+
+  <g stroke="#FFC65C" stroke-width="1" opacity=".38">
+    <path d="M450 62 L450 558 M202 310 L698 310 M274 134 L626 486 M626 134 L274 486"/>
+  </g>
+
+  <circle cx="450" cy="310" r="86" fill="#0B1B3F" opacity=".55"/>
+  <circle cx="450" cy="310" r="86" stroke="url(#ring)" stroke-width="1.6" opacity=".8"/>
+  <circle cx="450" cy="310" r="62" fill="url(#core)" opacity=".55"/>
+  <g fill="#FFD98A">
+    <ellipse cx="450" cy="292" rx="12" ry="20" transform="rotate(-18 450 292)"/>
+    <ellipse cx="428" cy="320" rx="10" ry="17" transform="rotate(22 428 320)"/>
+    <ellipse cx="472" cy="320" rx="10" ry="17" transform="rotate(-22 472 320)"/>
+    <ellipse cx="450" cy="340" rx="8" ry="14"/>
+  </g>
+  <g fill="#FFFFFF" opacity=".55">
+    <circle cx="386" cy="212" r="2"/><circle cx="520" cy="196" r="2.4"/>
+    <circle cx="582" cy="330" r="2"/><circle cx="360" cy="372" r="2.4"/>
+    <circle cx="498" cy="424" r="2"/><circle cx="318" cy="288" r="2"/>
+  </g>
+</svg>
