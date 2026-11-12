@@ -1,24 +1,21 @@
 # Robots policy for https://www.365ls.cn
 # Public static pages and assets are open to crawlers.
+# Missing URLs return HTTP 404; the custom 404 page is marked noindex.
 
 User-agent: *
 Allow: /
 Allow: /assets/
-Disallow: /404.html
 
 User-agent: Baiduspider
 Allow: /
 Allow: /assets/
-Disallow: /404.html
 
 User-agent: Googlebot
 Allow: /
 Allow: /assets/
-Disallow: /404.html
 
 User-agent: Bingbot
 Allow: /
 Allow: /assets/
-Disallow: /404.html
 
 Sitemap: https://www.365ls.cn/sitemap.xml
