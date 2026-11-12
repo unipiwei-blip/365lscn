@@ -1,4 +1,24 @@
+# Robots policy for https://www.365ls.cn
+# Public static pages and assets are open to crawlers.
+
 User-agent: *
 Allow: /
+Allow: /assets/
+Disallow: /404.html
+
+User-agent: Baiduspider
+Allow: /
+Allow: /assets/
+Disallow: /404.html
+
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Disallow: /404.html
+
+User-agent: Bingbot
+Allow: /
+Allow: /assets/
+Disallow: /404.html
 
 Sitemap: https://www.365ls.cn/sitemap.xml
