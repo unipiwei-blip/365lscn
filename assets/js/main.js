@@ -50,20 +50,60 @@
     });
   }
 
-  // 资讯分类筛选
+  // 资讯分类筛选 + 每页 6 篇（两列三行）的分页，两者联动
   var filters = document.querySelectorAll('.filter-bar button[data-filter]');
-  var cards = document.querySelectorAll('.article-list .article-card[data-cat]');
-  if (filters.length && cards.length) {
-    filters.forEach(function (b) {
+  var cards = Array.prototype.slice.call(
+    document.querySelectorAll('.article-list .article-card[data-cat]'));
+  var pageNav = document.getElementById('page-nav');
+  var pageInfo = document.getElementById('page-info');
+  var PAGE_SIZE = 6;
+  var currentCat = 'all';
+  var currentPage = 1;
+
+  function matched() {
+    return cards.filter(function (c) {
+      return currentCat === 'all' || c.getAttribute('data-cat') === currentCat;
+    });
+  }
+
+  function render() {
+    var list = matched();
+    var pages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+    if (currentPage > pages) currentPage = pages;
+    cards.forEach(function (c) { c.style.display = 'none'; });
+    list.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+      .forEach(function (c) { c.style.display = ''; });
+    if (pageInfo) pageInfo.textContent = '共 ' + list.length + ' 篇公开资讯';
+    if (!pageNav) return;
+    var h = '<button type="button" data-page="prev"' + (currentPage === 1 ? ' disabled' : '') + '>上一页</button>';
+    for (var i = 1; i <= pages; i++) {
+      h += '<button type="button" data-page="' + i + '" class="' + (i === currentPage ? 'on' : '') + '">' + i + '</button>';
+    }
+    h += '<button type="button" data-page="next"' + (currentPage === pages ? ' disabled' : '') + '>下一页</button>';
+    pageNav.innerHTML = h;
+    pageNav.querySelectorAll('button').forEach(function (b) {
       b.addEventListener('click', function () {
-        var key = b.getAttribute('data-filter');
-        filters.forEach(function (x) { x.classList.toggle('on', x === b); });
-        cards.forEach(function (c) {
-          var show = key === 'all' || c.getAttribute('data-cat') === key;
-          c.style.display = show ? '' : 'none';
-        });
+        var v = b.getAttribute('data-page');
+        if (v === 'prev') currentPage = Math.max(1, currentPage - 1);
+        else if (v === 'next') currentPage = Math.min(pages, currentPage + 1);
+        else currentPage = parseInt(v, 10);
+        render();
+        var listEl = document.querySelector('.article-list');
+        if (listEl) listEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+  }
+
+  if (filters.length && cards.length && pageNav) {
+    filters.forEach(function (b) {
+      b.addEventListener('click', function () {
+        currentCat = b.getAttribute('data-filter');
+        currentPage = 1;
+        filters.forEach(function (x) { x.classList.toggle('on', x === b); });
+        render();
+      });
+    });
+    render();
   }
 
   // canonical / og:url / 结构化数据已写为正式域名的绝对地址，避免多域名产生重复内容
