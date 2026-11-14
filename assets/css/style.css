@@ -251,6 +251,8 @@ body::after{
 .related h4,.related a{text-align:left}
 .article-figure{margin:0 auto 30px;max-width:820px;text-align:center}
 .article-figure img{width:100%;height:auto;border-radius:20px;box-shadow:0 16px 40px rgba(20,60,140,.16);border:1px solid rgba(255,255,255,.9)}
+/* 分享缩略图：离屏保留，供社交平台被动抓取，不影响可见布局 */
+.wx-share-thumb{position:absolute;top:0;left:-9999px;width:300px;height:300px;pointer-events:none;z-index:-1}
 .article-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:40px}
 .related{margin-top:44px;padding-top:28px;border-top:1px solid var(--line);text-align:center}
 .related h4{font-size:16px;font-weight:900;margin-bottom:16px}
