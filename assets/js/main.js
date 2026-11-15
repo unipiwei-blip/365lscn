@@ -75,6 +75,13 @@
       .forEach(function (c) { c.style.display = ''; });
     if (pageInfo) pageInfo.textContent = '共 ' + list.length + ' 篇公开资讯';
     if (!pageNav) return;
+    // 单页时不显示空翻页控件，避免出现无意义的按钮
+    if (pages <= 1) {
+      pageNav.innerHTML = '';
+      pageNav.style.display = 'none';
+      return;
+    }
+    pageNav.style.display = '';
     var h = '<button type="button" data-page="prev"' + (currentPage === 1 ? ' disabled' : '') + '>上一页</button>';
     for (var i = 1; i <= pages; i++) {
       h += '<button type="button" data-page="' + i + '" class="' + (i === currentPage ? 'on' : '') + '">' + i + '</button>';
@@ -94,7 +101,7 @@
     });
   }
 
-  if (filters.length && cards.length && pageNav) {
+  if (cards.length && pageNav) {
     filters.forEach(function (b) {
       b.addEventListener('click', function () {
         currentCat = b.getAttribute('data-filter');
