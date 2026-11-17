@@ -154,8 +154,9 @@ body::after{
 .t-grad{background:linear-gradient(100deg,#1668ff,#7a4bff 50%,#ef3a35);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-sub{margin:22px auto 0;font-size:16px;line-height:2;color:var(--muted);max-width:760px;text-align:center}
 .hero-sub strong{color:var(--ink-2);font-weight:800}
-.hero-brand{margin:20px auto 0;font-size:clamp(15px,1.5vw,19px);font-weight:750;letter-spacing:.08em;color:var(--blue-deep);text-align:center}
-.hero-motto{margin-top:24px;font-size:clamp(18px,2.1vw,27px);font-weight:850;letter-spacing:.16em;line-height:1.9;color:var(--ink);text-align:center}
+.hero-logo{display:block;width:min(46vw,440px);height:auto;margin:0 auto 30px}
+.hero h1.hero-brand{margin:0 auto;font-size:clamp(17px,2.1vw,28px);line-height:1.6;font-weight:800;letter-spacing:.1em;color:var(--blue-deep);text-align:center}
+.hero-motto{margin-top:26px;font-size:clamp(18px,2.1vw,27px);font-weight:850;letter-spacing:.16em;line-height:1.9;color:var(--ink);text-align:center}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
 .hero-trust{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
 .hero-trust .pill{background:rgba(255,255,255,.72)}
