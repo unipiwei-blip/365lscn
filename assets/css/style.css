@@ -208,6 +208,13 @@ body::after{
 .filter-bar button:hover{border-color:var(--blue);color:var(--blue)}
 .filter-bar button.on{color:#fff;background:linear-gradient(105deg,#1668ff,#5b4fff);border-color:transparent;box-shadow:0 8px 20px rgba(40,86,235,.22)}
 .article-list{display:grid;gap:20px;max-width:940px;margin:0 auto;text-align:center}
+/* 资讯列表：无封面，日期 + 标题，居左单列 */
+.article-list.rows{display:flex;flex-direction:column;gap:0;max-width:900px;text-align:left}
+.article-row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:18px 6px;border-bottom:1px solid var(--line);text-align:left;transition:.2s}
+.article-row:hover{background:rgba(255,255,255,.55)}
+.article-row .row-title{font-size:16.5px;font-weight:750;color:var(--ink);line-height:1.6;text-align:left}
+.article-row:hover .row-title{color:var(--blue-deep)}
+.article-row .row-date{flex:0 0 auto;font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.04em;text-align:right}
 .article-list.cols2{max-width:1040px;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
 .article-list.cols2 .article-card{padding:22px 22px 24px}
 .article-list.cols2 .article-card h3{font-size:18px}

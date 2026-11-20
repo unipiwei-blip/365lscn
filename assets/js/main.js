@@ -53,7 +53,7 @@
   // 资讯分类筛选 + 每页 6 篇（两列三行）的分页，两者联动
   var filters = document.querySelectorAll('.filter-bar button[data-filter]');
   var cards = Array.prototype.slice.call(
-    document.querySelectorAll('.article-list .article-card[data-cat]'));
+    document.querySelectorAll('.article-list .article-card[data-cat], .article-list.rows .article-row'));
   var pageNav = document.getElementById('page-nav');
   var pageInfo = document.getElementById('page-info');
   var PAGE_SIZE = 6;
