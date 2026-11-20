@@ -244,8 +244,8 @@ body::after{
 .article-meta .crumb{font-size:12.5px;color:var(--blue);margin-bottom:20px;text-align:left}
 .article-body{margin:34px auto 0;max-width:820px;text-align:left}
 .article-body p{font-size:16px;line-height:2.15;color:#2b3d5c;margin-bottom:20px;text-align:left;text-indent:2em}
-.article-body h2{font-size:22px;font-weight:900;color:var(--ink);margin:34px 0 14px;text-align:left}
-.article-body h3{font-size:18px;font-weight:850;color:var(--blue-deep);margin:26px 0 10px;text-align:left}
+.article-body h2{font-size:22px;font-weight:900;color:var(--ink);margin:34px 0 14px;text-align:left;text-indent:2em}
+.article-body h3{font-size:18px;font-weight:850;color:var(--blue-deep);margin:26px 0 10px;text-align:left;text-indent:2em}
 .article-body ul{margin:0 auto 22px;max-width:760px;text-align:left}
 .article-body li{font-size:15.5px;line-height:2;color:#2b3d5c;text-align:left}
 .article-body li::before{content:"◆";color:var(--gold);font-size:10px;margin-right:8px;vertical-align:2px}
@@ -263,12 +263,12 @@ body::after{
 
 /* ---------- FAQ ---------- */
 .faq{max-width:860px;margin:0 auto;display:grid;gap:12px;text-align:center}
-.faq details{background:rgba(255,255,255,.80);border:1px solid var(--line);border-radius:16px;padding:16px 22px;text-align:center;box-shadow:0 4px 16px rgba(20,80,180,.05)}
-.faq summary{font-size:15.5px;font-weight:800;color:var(--ink-2);cursor:pointer;list-style:none;text-align:center}
+.faq details{background:rgba(255,255,255,.80);border:1px solid var(--line);border-radius:16px;padding:16px 22px;text-align:left;box-shadow:0 4px 16px rgba(20,80,180,.05)}
+.faq summary{font-size:15.5px;font-weight:800;color:var(--ink-2);cursor:pointer;list-style:none;text-align:left;text-indent:2em}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"＋";color:var(--blue);margin-left:10px;font-weight:900}
 .faq details[open] summary::after{content:"－"}
-.faq details p{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.95;text-align:center}
+.faq details p{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.95;text-align:left;text-indent:2em}
 
 /* ---------- CTA 带 ---------- */
 .cta-band{position:relative;overflow:hidden;border-radius:28px;padding:54px 30px;color:#fff;background:linear-gradient(110deg,#0b47d6,#5b4fff 52%,#ef3a35);box-shadow:0 24px 60px rgba(20,60,160,.24);text-align:center}
