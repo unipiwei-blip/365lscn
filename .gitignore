@@ -2,6 +2,5 @@
 .DS_Store
 Thumbs.db
 *.pyc
-
 # 百度推送已推记录（本地保留，不发布）
 www_365ls_cn_pushed.txt
